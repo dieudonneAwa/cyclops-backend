@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --exec babel-node src/app.js",
-    "build": "babel src/app.js --out-dir build"
+    "build": "babel src/app.js --out-dir build",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Andela Simulations Programme",
   "license": "MIT",
@@ -28,7 +30,8 @@
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "request": "^2.87.0",
-    "underscore": "^1.9.1"
+    "underscore": "^1.9.1",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
@@ -36,5 +39,6 @@
     "@babel/node": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "nodemon": "^1.19.1"
-  }
+  },
+  "snyk": true
 }
